@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <meta name="author" content="Brittany Garcia">
-        <title>Homepage</title>
-        <link rel="stylesheet" href="main.css">
+    	<head>
+        	<meta charset="utf-8">
+        	<meta name="viewport" content="width=device-width">
+        	<meta name="author" content="Brittany Garcia">
+        	<title>Homepage</title>
+        	<link rel="stylesheet" href="main.css">
+		<script type = "text/javascript" src = "homepage.js" ></script>
+    	</head>
 
 
-
-    </head>
-    <body>
-<div class="nav">
-    <div class="logo" style="padding-top:13px;padding-bottom:10px">
-      <i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
-      <h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
-      </div>
-    <div class="main-nav">
-      <a class="hamburger-nav"></a>
-      <ul class="menu">
-      <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
-       <li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
-       <li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
-       <li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
-       </ul>
+	<body>
+		<div class="nav">
+    			<div class="logo" style="padding-top:13px;padding-bottom:10px">
+      				<i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
+      				<h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
+      			</div>
+   			<div class="main-nav">
+      				<a class="hamburger-nav"></a>
+     				<ul class="menu">
+      					<li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
+       					<li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+       					<li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
+       					<li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
+      			 	</ul>
       
-      
-      <ul class="menu2">
-      <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
-      <li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
-      </ul>
-      
-      
-      </div>
-  </div>
+      				<ul class="menu2">
+      					<li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
+      					<li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
+     		 		</ul>
+      			</div>
+  		</div>
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script>
-$(document).ready(function(){
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
 
-    $(".hamburger-nav").on("click", function(){
+    				$(".hamburger-nav").on("click", function(){
+        				// $(".menu").fadeToggle("slow").toggleClass("menu-hide");
+        				$(".menu").animate({
+         					height: 'toggle'
+        				});
+    				});
 
-        // $(".menu").fadeToggle("slow").toggleClass("menu-hide");
-        $(".menu").animate({
-          height: 'toggle'
-        });
+				$(".fa-bandcamp").on("click", function(){
+        				$(".menu2").animate({
+          					height: 'toggle'
+        				});
+    				});
+			});
 
-    });
+		</script>
 
+		<div class ="titles">
+			<h1>
+				Campus Reporter
+			</h1>
 
-$(".fa-bandcamp").on("click", function(){
+			<img src="iconTemplateLarge.png" align="center" height="300" width="450" alt="Website Logo">			
 
-        $(".menu2").animate({
-          height: 'toggle'
-        });
-
-    });
-
-});
-
-</script>
+			<h5>
+				Report campus issues to facilities and staff!
+			</h5>
+			<table id="buttonMapLayout" border ="0">
+				<tr>
+					<td>
+						<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
+							<button type = "submit"> Submit a Maintenance Ticket </button>
+						</form>
+					</td>
+					<td rowspan = "2">
+						<!-- This will be a Map of the Campus(possibly interactive). Aligned to the right-->
+   		 				<img src="Place Holder for Interactive Map" alt="Interactive Map of CSUSM Campus">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
+							<button type = "submit"> View All Reported Issues </button>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
     </body>
 </html>
