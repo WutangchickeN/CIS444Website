@@ -3,24 +3,190 @@
 <head>
        <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <title>About Page</title>
+
+  <style>
+  h1 { margin-top: 50px ; text-align: center; }
+    
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.nav {
+  background: #2c3e50;
+  position: relative;
+  z-index: 1000;
+}
+
+
+.nav .logo i {
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+
+.nav .logo i:hover {
+  color: #e74c3c;
+  transition: color 0.3s;
+}
+
+.nav .main-nav .hamburger-nav::after {
+  font-family: fontawesome;
+  content: "\f0c9";
+  color: #fafafa;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  cursor: pointer;
+}
+
+
+.nav .main-nav .menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 64%;
+  padding-left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.nav .main-nav .menu a {
+  display: block;
+  background: #2c3e50;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 0.5px solid rgba(200, 200, 200, 0.2);
+}
+
+
+.nav .main-nav .menu a:hover {
+ 
+  transition: background 0.3s ease;
+}
+
+
+.nav .main-nav .menu a:hover li {
+  color: #c0392b;
+}
+
+
+.nav .main-nav .menu a li {
+  color: white;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+
+.nav .main-nav .menu2 {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 64%;
+  padding-left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.nav .main-nav .menu2 a {
+  display: block;
+  background: #2c3e50;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 0.5px solid rgba(200, 200, 200, 0.2);
+}
+
+
+.nav .main-nav .menu2 a:hover {
+ 
+  transition: background 0.3s ease;
+}
+
+
+.nav .main-nav .menu2 a:hover li {
+  color: #c0392b;
+}
+
+
+.nav .main-nav .menu2 a li {
+  color: white;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=../css/app.map */
+
+  </style>
+
 </head>
 
 <body>
-  <div class="content">
-        <!--Navbar-->
-    <header style="background-color: #2c3e50;" class="header">
-      <a  style="color: white" href="#reporting" class="logo">MENU</a>
-      <input class="menu-btn" type="checkbox" id="menu-btn" />
-      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-      <ul  class="menu">
-        <li><a style="color: black; background-color: #ffffff;" href="#work">Our Work</a></li>
-        <li><a style="color: black; background-color: #ffffff;"  href="#about">About</a></li>
-        <li><a style="color: black; background-color: #ffffff;"  href="#careers">Careers</a></li>
-        <li><a style="color: black; background-color: #ffffff;"  href="#contact">Contact</a></li>
+ 
+<div class="nav">
+    <div class="logo" style="padding-top:13px;padding-bottom:10px">
+      <i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
+      <h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
+      </div>
+    <div class="main-nav">
+      <a class="hamburger-nav"></a>
+      <ul class="menu">
+      <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
+       <li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+       <li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
+       <li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
+       </ul>
+      
+      
+      <ul class="menu2">
+      <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
+      <li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
       </ul>
-    </header>
+      
+      
+      </div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $(".hamburger-nav").on("click", function(){
+
+        // $(".menu").fadeToggle("slow").toggleClass("menu-hide");
+        $(".menu").animate({
+          height: 'toggle'
+        });
+
+    });
+
+
+$(".fa-bandcamp").on("click", function(){
+
+        $(".menu2").animate({
+          height: 'toggle'
+        });
+
+    });
+
+});
+
+</script>
+ 
  <h2 class="shadow">About Us</h2>
 
 <h3>Website</h3><hr>
