@@ -37,6 +37,9 @@
 			$(document).ready(function(){
 
     				$(".hamburger-nav").on("click", function(){
+					$(".menu2").hide(); 
+ 					//$(".menu").show();
+
         				// $(".menu").fadeToggle("slow").toggleClass("menu-hide");
         				$(".menu").animate({
          					height: 'toggle'
@@ -44,7 +47,9 @@
     				});
 
 				$(".fa-bandcamp").on("click", function(){
-        				$(".menu2").animate({
+				$(".menu2").hide(); 
+				 //$(".menu").show();
+					$(".menu2").animate({
           					height: 'toggle'
         				});
     				});
