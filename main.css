@@ -15,6 +15,13 @@ body {
   margin: 0;
 }
 
+.container {
+  width: 80%;
+  margin: auto;
+  overflow:hidden;
+
+}
+
 table, th, td { 
   border: 1px solid; 
   border-spacing: 7px;                
@@ -36,7 +43,6 @@ th, td {
 .shadow {    
   text-shadow: 1px 1px #1c87c9;
 }
-
 
 .header {
   background-color: #fff;
@@ -191,6 +197,7 @@ transform: translate(-50%, -50%);
   top: 40px;
   left: 40px;
 }
+
 .footer {
    top: 20px;
    position: relative;
@@ -221,10 +228,13 @@ td {
   padding: 30px;
 }
 
+
+/* NAVIGATION BAR START */
 .nav {
   background: #2c3e50;
   position: relative;
   z-index: 1000;
+  border-bottom: #3e8e41 3px solid;
 }
 
 
@@ -251,7 +261,6 @@ td {
   cursor: pointer;
 }
 
-
 .nav .main-nav .menu {
   display: none;
   list-style: none;
@@ -274,7 +283,6 @@ td {
 
 
 .nav .main-nav .menu a:hover {
- 
   transition: background 0.3s ease;
 }
 
