@@ -21,6 +21,12 @@ body {
   overflow:hidden;
 }
 
+/* showcase */
+#showcase{
+  min-height: 400px;
+  background:url('')
+}
+
 table, th, td { 
   border: 1px solid; 
   border-spacing: 7px;                
