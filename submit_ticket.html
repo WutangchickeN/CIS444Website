@@ -10,30 +10,28 @@
     </head>
     
 	<body>
-
         <div class="nav">
-    <div class="logo" style="padding-top:13px;padding-bottom:10px">
-      <i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
-      <h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
-      </div>
-    <div class="main-nav">
-      <a class="hamburger-nav"></a>
-      <ul class="menu">
-      <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
-       <li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
-       <li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
-       <li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
-       </ul>
+			<div class="logo" style="padding-top:13px;padding-bottom:10px">
+			<i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
+			<h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
+			</div>
+
+			<div class="main-nav">
+			<a class="hamburger-nav"></a>
+			<ul class="menu">
+			<li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
+			<li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+			<li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
+			<li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
+			</ul>
+			
       
-      
-      <ul class="menu2">
-      <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
-      <li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
-      </ul>
-      
-      
-      </div>
-  </div>
+			<ul class="menu2">
+			<li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
+			<li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
+			</ul>
+     	 	</div>
+  		</div>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
@@ -61,110 +59,113 @@ $(".fa-bandcamp").on("click", function(){
 
 </script>
 
-	<h2>
-		Submit Ticket Page
-	</h2>
-	<form action ="" onsubmit="return popUp()">
-		
-		<p> <!-- This will be a Map of the Campus(possibly interactive). Aligned to the right-->
-			<img src="csusm_campus_map.jpg" alt="Interactive Map of CSUSM Campus">
-		</p>
+	<div class="container">
+		<h2>
+			Submit Ticket Page
+		</h2>
+		<form action ="" onsubmit="return popUp()">
+			
+			<p> <!-- This will be a Map of the Campus(possibly interactive). Aligned to the right-->
+				<img src="csusm_campus_map.jpg" alt="Interactive Map of CSUSM Campus">
+			</p>
 
-		<p> <!-- Select the Building -->
-			Building 
-			<select name = "Building">
-				<option> Any </option>
-				<option> Academic Hall </option>
-				<option> Arts Building </option>
-				<option> Markstein Hall </option>
-				<option> Craven Hall </option>
-				<option> Extended Learning </option>
-				<option> Engineering Pavillion</option>
-				<option> Field House </option>
-				<option> Kellogg Library </option>
-				<option> The McMahan House </option>
-				<option> Public Safety Building </option>
-				<option> SBSB Building </option>
-				<option> Science Hall 1 </option>
-				<option> Science Hall 2 </option>
-				<option> SHCS Building </option>
-				<option> USU </option>
-				<option> University Commons</option>
-				<option> University Hall </option>
-				<option> Veterans Center </option>
-			</select>
-		</p>
-		
-		<p> <!-- Select the Floor -->
-			Floor
-			<select name = "Floor">
-				<option> Any </option>
-				<option> Lobby </option>
-				<option> 1 </option>
-				<option> 2 </option>
-				<option> 3 </option>
-				<option> 4 </option>
-				<option> 5 </option>
-				<option> 6 </option>
-				<option> Roof </option>
-			</select>
-		</p>
-		
-		<p> <!-- Insert the Room Number -->
-			Room Number
-			<input type="text" name="RoomNumber" size="5" maxlength="5">
-		</p>
-		
-		<p> <!-- Select the general issue description -->
-			General Issue 
-			<select id="slct1" name = "slct1" onchange="populate('slct1', 'slct2')">
-				<option> Any </option>
-				<option> Damage </option>
-				<option> Cleanliness </option>
-				<option> Cosmetic </option>
-				<option> Technical </option>
-				<option> Electrical </option>
-				<option> Plumbing </option>
-				<option> Equipment </option>
-				<option> Other </option>
-			</select>
-		</p>
+			<p> <!-- Select the Building -->
+				Building 
+				<select name = "Building">
+					<option> Any </option>
+					<option> Academic Hall </option>
+					<option> Arts Building </option>
+					<option> Markstein Hall </option>
+					<option> Craven Hall </option>
+					<option> Extended Learning </option>
+					<option> Engineering Pavillion</option>
+					<option> Field House </option>
+					<option> Kellogg Library </option>
+					<option> The McMahan House </option>
+					<option> Public Safety Building </option>
+					<option> SBSB Building </option>
+					<option> Science Hall 1 </option>
+					<option> Science Hall 2 </option>
+					<option> SHCS Building </option>
+					<option> USU </option>
+					<option> University Commons</option>
+					<option> University Hall </option>
+					<option> Veterans Center </option>
+				</select>
+			</p>
+			
+			<p> <!-- Select the Floor -->
+				Floor
+				<select name = "Floor">
+					<option> Any </option>
+					<option> Lobby </option>
+					<option> 1 </option>
+					<option> 2 </option>
+					<option> 3 </option>
+					<option> 4 </option>
+					<option> 5 </option>
+					<option> 6 </option>
+					<option> Roof </option>
+				</select>
+			</p>
+			
+			<p> <!-- Insert the Room Number -->
+				Room Number
+				<input type="text" name="RoomNumber" size="5" maxlength="5">
+			</p>
+			
+			<p> <!-- Select the general issue description -->
+				General Issue 
+				<select id="slct1" name = "slct1" onchange="populate('slct1', 'slct2')">
+					<option> Any </option>
+					<option> Damage </option>
+					<option> Cleanliness </option>
+					<option> Cosmetic </option>
+					<option> Technical </option>
+					<option> Electrical </option>
+					<option> Plumbing </option>
+					<option> Equipment </option>
+					<option> Other </option>
+				</select>
+			</p>
 
-		<p> <!-- Select the specific issue description -->
-			Specific Issue 
-			<select id="slct2" name = "slct2"></select>
-		</p>
+			<p> <!-- Select the specific issue description -->
+				Specific Issue 
+				<select id="slct2" name = "slct2"></select>
+			</p>
 
-		<p> Provide any Additional Information: </p>
-        <p><!-- Text area for any additional information the user wishes to provide -->
-            <textarea name="extraInfo" rows="3" cols="40"> </textarea>
-        </p>
+			<p> Provide any Additional Information: </p>
+			<p><!-- Text area for any additional information the user wishes to provide -->
+				<textarea name="extraInfo" rows="3" cols="40"> </textarea>
+			</p>
 
-		
-		<!-- This button will submit a query to the Database in order for the table to be updated -->
-		<input type="submit" value="Submit Ticket" onclick=" "/> 
-		<!-- This button will clear the form -->
-		<input type="reset" value="Clear Form" onclick=" "/> 
+			
+			<!-- This button will submit a query to the Database in order for the table to be updated -->
+			<input type="submit" value="Submit Ticket" onclick=" "/> 
+			<!-- This button will clear the form -->
+			<input type="reset" value="Clear Form" onclick=" "/> 
 
-<hr/>
+			<hr/>
 
-		<table> <!-- This Table will get information from Database on issues that have been reported. Border: thin solid black-->
-			<tr> Outstanding Reports </tr>
-			<tr>
-				<th> Building </th>
-				<th> Floor </th>
-				<th> Room Number </th>
-				<th> Description</th>
-				<th> Status </th>
-				<th> Select </th>
-			</tr>
-			<tr><!-- Placeholder Example of what should happen once the Table gets information from Database-->
-				<th> Example </th>
-				<th> Example </th>
-				<th> Example </th>
-				<th> Example </th>
-				<th> Incomplete </th>
-				<th> <input type="button" value="Select"/> </th>
-			</tr>
+			<table> <!-- This Table will get information from Database on issues that have been reported. Border: thin solid black-->
+				<tr> Outstanding Reports </tr>
+				<tr>
+					<th> Building </th>
+					<th> Floor </th>
+					<th> Room Number </th>
+					<th> Description</th>
+					<th> Status </th>
+					<th> Select </th>
+				</tr>
+				<tr><!-- Placeholder Example of what should happen once the Table gets information from Database-->
+					<th> Example </th>
+					<th> Example </th>
+					<th> Example </th>
+					<th> Example </th>
+					<th> Incomplete </th>
+					<th> <input type="button" value="Select"/> </th>
+				</tr>
+			</table>
+		</div>
     </body>
 </html>
