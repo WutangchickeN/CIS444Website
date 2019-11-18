@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+  color: #000000;
   width: 80%;
   margin: auto;
   overflow:hidden;
@@ -24,12 +25,12 @@ body {
 /* showcase */
 #showcase{
   min-height: 400px;
+  opacity: 0.5;
   background:url('./img/school_wide.jpg') no-repeat 0 -400px;
   text-align: center;
-  color: #ffffff;
 }
 
-#showcase h2{
+#showcase h1, h2{
   margin-top: 150px;
   font-size: 55px;
   margin-bottom: 10px;
@@ -37,6 +38,46 @@ body {
 
 #showcase p{
   font-size:25px;
+}
+
+/* Button styles */
+.button_1{
+  height:38px;
+  background:#ff3d08;
+  border:0;
+  padding-left:20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+/* Boxes */
+#boxes h5{
+  font-size: 40px;
+  text-align: center;
+}
+
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  height: 90px;
+  width:90px;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color: #ffffff;
+  background-color: #2c3e50;
+  text-align:center;
 }
 
 table, th, td { 
@@ -99,6 +140,7 @@ th, td {
   max-height: 0;
   transition: max-height .2s ease-out;
 }
+
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -215,7 +257,7 @@ transform: translate(-50%, -50%);
   left: 40px;
 }
 
-.footer {
+/* .footer {
    top: 20px;
    position: relative;
    padding: 0.5px;
@@ -223,7 +265,7 @@ transform: translate(-50%, -50%);
    background-color: #2c3e50;
    color: white;
    text-align: center;
-}
+} */
 
 td {
   background-color: #ffffff;

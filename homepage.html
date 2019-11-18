@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-    	<head>
-        	<meta charset="utf-8">
-        	<meta name="viewport" content="width=device-width">
-        	<meta name="author" content="Brittany Garcia">
-        	<title>Homepage</title>
-        	<link rel="stylesheet" href="main.css">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="Brittany Garcia">
+		<title>Homepage</title>
+		<link rel="stylesheet" type="text/css" href="css/all.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="main.css">
 		<script type = "text/javascript" src = "homepage.js" ></script>
-    	</head>
+	</head>
 
 
 	<body>
@@ -52,36 +54,49 @@
 
 		</script>
 
-		<div class ="titles">
-			<h1>
-				Campus Reporter
-			</h1>
+		<section id="showcase">
+			<div class ="container">
+				<h1>
+					Campus Reporter
+				</h1>
+			</div>
+		</section>
 
-			<img src="./img/iconTemplateLarge.png" alt="Website Logo" class="center">			
+		<section id="boxes">
+			<div class="container">
+				<img src="./img/iconTemplateLarge.png" alt="Website Logo" class="center">			
+				<h5>
+					Report campus issues to facilities and staff!
+				</h5>
+				</div>
+			</section>
 
-			<h5>
-				Report campus issues to facilities and staff!
-			</h5>
-			<table id="buttonMapLayout" border ="0">
-				<tr>
-					<td>
-						<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
-							<button type = "submit"> Submit a Maintenance Ticket </button>
-						</form>
-					</td>
-					<td rowspan = "2">
-						<!-- This will be a Map of the Campus(possibly interactive). Aligned to the right-->
-   		 				<img src="Place Holder for Interactive Map" alt="Interactive Map of CSUSM Campus">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
-							<button type = "submit"> View All Reported Issues </button>
-						</form>
-					</td>
-				</tr>
-			</table>
-		</div>
+				<section id="boxes">
+						<div class="container">
+						  <div class="box">
+							<img src=./img/15871-illustration-of-tools-pv.png>
+							<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
+								<button type = "submit" class="button_1"> Submit a Maintenance Ticket </button>
+							</form>
+						  </div>
+						  <div class="box">
+							<img src="./img/KF33.001-1-518x518.jpg">
+							<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
+								<button type = "submit" class="button_1"> View All Reported Issues </button>
+							</form>
+						  </div>
+						  <div class="box">
+							<img src="./img/grandma.jpg">
+							<form action= "https://cis444.cs.csusm.edu/PLACEHOLDERFORSERVER">
+								<button type = "submit" class="button_1"> Do Another Thing! </button>
+							</form>
+							</div>
+						</div>
+				</section>
+
+    <footer>
+      <p>Team C, Copyright &copy; 2019</p>
+    </footer>
+
     </body>
 </html>
