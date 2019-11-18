@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #aaaaaa;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.5;
@@ -16,7 +16,6 @@ body {
 }
 
 .container {
-  color: #000000;
   width: 80%;
   margin: auto;
   overflow:hidden;
@@ -30,7 +29,7 @@ body {
   text-align: center;
 }
 
-/* showcase */
+/* showcase
 #showcase{
   min-height: 400px;
   background:url('./img/school_wide_overlay1.jpg') no-repeat 0 -400px;
@@ -46,7 +45,48 @@ body {
 #showcase p{
   color: #02005c;
   font-size:25px;
+} */
+
+/* front page stuff */
+.banner{
+  width:80%;
+  height: 70%;
+  top: 25%;
+  left: 130px;
+  color:#010036;
 }
+
+.app-text{
+  padding-top: 50px;
+  width: 50%;
+  float: left;
+}
+
+.app-text h1{
+  font-size: 43px;
+  width: 640px;
+  position: relative;
+  margin-left: 40px;
+}
+
+.app-text p{
+  width: 650px;
+  font-size: 15px;
+  margin: 30px 0 30px 40px;
+  line-height:25px;
+}
+
+.app-picture{
+  width: 50%;
+  float: right;
+}
+
+.app-picture img{
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 150px;
+}
+
 
 /* Button styles */
 .button_1{
@@ -57,6 +97,20 @@ body {
   padding-right:20px;
   color:#ffffff;
 }
+
+/* Newsletter */
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background:#226fa0;
+  border-top: #ffffff 2px solid;
+  border-bottom: #ffffff 2px solid;
+}
+
+#newsletter h1{
+  text-align: center;
+}
+
 
 /* Boxes */
 #boxes h5{
@@ -89,6 +143,7 @@ footer{
   color: #ffffff;
   background-color: #2c3e50;
   text-align:center;
+  position: fixed;
 }
 
 
@@ -296,7 +351,7 @@ td {
   background: #2c3e50;
   position: relative;
   z-index: 1000;
-  border-bottom: #3e8e41 3px solid;
+  border-bottom: #3cb2fb 3px solid;
 }
 
 
