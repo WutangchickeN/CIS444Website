@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <link rel="stylesheet" href="main.css">
         <title>About Page</title>
 
@@ -13,115 +14,113 @@
     <div class="nav">
         <div class="logo" style="padding-top:13px;padding-bottom:10px">
           <i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
-          <h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
-          </div>
+          <h4>Campus Reporter</h4>
+        </div>
         <div class="main-nav">
           <a class="hamburger-nav"></a>
           <ul class="menu">
-          <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
-          <li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
-          <li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
-          <li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
+            <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
+            <li> <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+            <li><a href="#about" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
+            <li><a href="#contact" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
           </ul>
-          
           
           <ul class="menu2">
-          <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
-          <li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
+            <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
+            <li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
           </ul>
-          
-          
-          </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script>
-    $(document).ready(function(){
+    <script>
+      $(document).ready(function(){
 
-        $(".hamburger-nav").on("click", function(){
-	      $(".menu2").hide();     
-        //$(".menu").show();
-        // $(".menu").fadeToggle("slow").toggleClass("menu-hide");
-            $(".menu").animate({
-              height: 'toggle'
-            });
+          $(".hamburger-nav").on("click", function(){
+          $(".menu2").hide();     
+          //$(".menu").show();
+          // $(".menu").fadeToggle("slow").toggleClass("menu-hide");
+              $(".menu").animate({
+                height: 'toggle'
+              });
 
-        });
+          });
 
-    $(".fa-bandcamp").on("click", function(){
-    //$(".menu2").show();
-     $(".menu").hide();
+      $(".fa-bandcamp").on("click", function(){
+      //$(".menu2").show();
+      $(".menu").hide();
 
-            $(".menu2").animate({
-              height: 'toggle'
-            });
+              $(".menu2").animate({
+                height: 'toggle'
+              });
 
-        });
+          });
 
-    });
+      });
     </script>
 
 
-    <section id="showcase">
-      <div class="container">
-        <h2 class="shadow">About Us</h2>
-          <p>This website is designed to allow users to file reports regarding problems or issues with facilities, rooms and spaces on campus. It uses a ticket system in which the user submit a ticket and the admin of the website will read the ticket.</p>
+    <section id="about-section">
+      <div class="about-container">
+        <h1 class="heading"> Meet the Team</h1>
+        <div class="card-wrapper">
+          <div class="card">
+            <img src="img/background_img.jpg" class="card-img">
+            <img src="img/brittany.jpeg" class="profile-img">
+            <h1>Brittany Garcia</h1>
+            <p class="job-title">CSS Master</p>
+            <p class="about">Some dummy text about nothing really, im a student blah blach whatever</p>
+            <a href="#" class="btn">Contact</a>
+          </div>
+
+          <div class="card">
+              <img src="img/background_img.jpg" class="card-img">
+              <img src="img/grandma.jpg" class="profile-img">
+              <h1>Abdullah Banawas</h1>
+              <p class="job-title">HTML God</p>
+              <p class="about">Some dummy text about nothing really, im a student blah blach whatever</p>
+              <a href="#" class="btn">Contact</a>
+          </div>
+
+          <div class="card">
+              <img src="img/background_img.jpg" class="card-img">
+              <img src="img/grandma.jpg" class="profile-img">
+              <h1>Aziz</h1>
+              <p class="job-title">HTML God</p>
+              <p class="about">Some dummy text about nothing really, im a student blah blach whatever</p>
+              <a href="#" class="btn">Contact</a>
+          </div>
+
+          <div class="card">
+              <img src="img/background_img.jpg" class="card-img">
+              <img src="img/grandma.jpg" class="profile-img">
+              <h1>Michael Tobin</h1>
+              <p class="job-title">Database Master</p>
+              <p class="about">Some dummy text about nothing really, im a student blah blach whatever</p>
+              <a href="#" class="btn">Contact</a>
+          </div>
+
+          <div class="card">
+              <img src="img/background_img.jpg" class="card-img">
+              <img src="img/grandma.jpg" class="profile-img">
+              <h1>Jeff Foertsch</h1>
+              <p class="job-title">Project Lead</p>
+              <p class="about">Some dummy text about nothing really, im a student blah blach whatever</p>
+              <a href="#" class="btn">Contact</a>
+          </div>
+
+          <div class="card">
+              <img src="img/background_img.jpg" class="card-img">
+              <img src="img/grandma.jpg" class="profile-img">
+              <h1>Luiz Hernandez</h1>
+              <p class="job-title">HTML God</p>
+              <p class="about">Some dummy text about nothing really, im a student blah blach whatever</p>
+              <a href="#" class="btn">Contact</a>
+          </div>
+
+        </div>
       </div>
     </section>
-
-    <div class="box2">
-        <h3>Contact Email</h3>
-        <p>You can contact us at email@cougars.csusm.edu</p>
-        <hr>
-    </div>
-
-    <div class="container">
-        <h3>Project Members</h3>
-        <table>
-          <tr>
-            <td>Abdullah Banawas</td>
-            <td>Add Image here</td>
-            <td>Description</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-          <tr>
-            <td>Aziz</td>
-            <td>Add Image here</td>
-            <td>Description</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-          <tr>
-            <td>Michael Tobin</td>
-            <td>Add Image here</td>
-            <td>Description</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-          <tr>
-            <td>Jeff Foertsch</td>
-            <td>Add Image here</td>
-            <td>Description</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-          <tr>
-            <td>Brittany Garcia</td>
-            <td><img src="./img/brittany.jpeg"></td>
-            <td>A human!</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-          <tr>
-            <td>Luiz Hernandez</td>
-            <td>Add Image here</td>
-            <td>Description</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-          <tr>
-            <td>Amir</td>
-            <td>Add Image here</td>
-            <td>Description</td>
-            <td><a href="#">LinkedIn Profile</a></td>
-          </tr>
-        </table>
-    </div>
 
     <footer>
         <p>Team C, Copyright &copy; 2019</p>
