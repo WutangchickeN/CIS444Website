@@ -34,20 +34,22 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script>
+        <script>
     $(document).ready(function(){
 
         $(".hamburger-nav").on("click", function(){
-
-            // $(".menu").fadeToggle("slow").toggleClass("menu-hide");
+	      $(".menu2").hide();     
+        //$(".menu").show();
+        // $(".menu").fadeToggle("slow").toggleClass("menu-hide");
             $(".menu").animate({
               height: 'toggle'
             });
 
         });
 
-
     $(".fa-bandcamp").on("click", function(){
+    //$(".menu2").show();
+     $(".menu").hide();
 
             $(".menu2").animate({
               height: 'toggle'
@@ -57,6 +59,7 @@
 
     });
     </script>
+
 
     <section id="showcase">
       <div class="container">
