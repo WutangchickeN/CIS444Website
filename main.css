@@ -22,11 +22,18 @@ body {
   overflow:hidden;
 }
 
+.box2{
+  color: #000000;
+  width: 80%;
+  margin: auto;
+  overflow:hidden;
+  text-align: center;
+}
+
 /* showcase */
 #showcase{
   min-height: 400px;
-  opacity: 0.5;
-  background:url('./img/school_wide.jpg') no-repeat 0 -400px;
+  background:url('./img/school_wide_overlay1.jpg') no-repeat 0 -400px;
   text-align: center;
 }
 
@@ -37,6 +44,7 @@ body {
 }
 
 #showcase p{
+  color: #02005c;
   font-size:25px;
 }
 
@@ -103,7 +111,8 @@ th, td {
 }
 
 .shadow {    
-  text-shadow: 1px 1px #1c87c9;
+  color: #010036;
+  text-shadow: 1px 1px #3cb2fb;
 }
 
 .header {
