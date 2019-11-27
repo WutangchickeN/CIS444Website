@@ -6,8 +6,7 @@ $password = "3gCLD+9D+Fx8";
 $database = "team_c";
 
 $connect = mysqli_connect($host, $user, $password, $database);
-$query = "SELECT * FROM 'ROOM'";
-$result1 = mysqli_query($connect, $query);
+
 
 ?>
 
@@ -34,7 +33,7 @@ $result1 = mysqli_query($connect, $query);
       <a class="hamburger-nav"></a>
       	<ul class="menu">
         	<li><a href="http://cis444.cs.csusm.edu/team_c/submit_ticket.html" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
-        	<li> <a href="http://cis444.cs.csusm.edu/team_c/view_issues.html" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+        	<li> <a href="http://cis444.cs.csusm.edu/team_c/view_issues.php" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
         	<li><a href="http://cis444.cs.csusm.edu/team_c/reporting.html" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
         	<li><a href="http://cis444.cs.csusm.edu/team_c/about.html" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
         </ul>
@@ -86,14 +85,8 @@ $(".fa-bandcamp").on("click", function(){
 			<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Search%20Results%20333%20S%20Twin%20Oaks%20Valley%20Rd%2C%20San%20Marcos%2C%20CA%2092096&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
 		</p>
 
-		<select>
-			<?php while($row1 = mysqli_fetch_array($result1)):;?>
-			<option><?php echo $row1[1]?></option>
-			<?php endwhile;?>
-		</select>
-
 		<p> <!-- Select the Building -->
-			Building test
+			Building
 			<select name = "Building">
 				<option> Any </option>
 				<option> Academic Hall </option>
