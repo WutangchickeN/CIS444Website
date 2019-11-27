@@ -1,15 +1,3 @@
-<?php
-
-$host = "localhost";
-$user = "team_c";
-$password = "3gCLD+9D+Fx8";
-$database = "team_c";
-
-$connect = mysqli_connect($host, $user, $password, $database);
-
-
-?>
-
 <!DOCTYPE html>
 <!-- view_issues.html
     A web page where users can view issues that have been reported through the Campus Reporter Website -->
@@ -79,11 +67,20 @@ $(".fa-bandcamp").on("click", function(){
 	<h2>
 	View Issues Page
 	</h2>
-	<form action ="" onsubmit="return popUp()">
+
+	<?php
+		if(isset($_REQUEST['select'])) {
+				select();
+		}
+	?>
+
+	<!-- <form action ="" onsubmit="return popUp()"> -->
 		
 		<p> <!-- This will be a Map of the Campus(possibly interactive). Aligned to the right-->
 			<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Search%20Results%20333%20S%20Twin%20Oaks%20Valley%20Rd%2C%20San%20Marcos%2C%20CA%2092096&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
 		</p>
+
+
 
 		<p> <!-- Select the Building -->
 			Building
@@ -152,10 +149,73 @@ $(".fa-bandcamp").on("click", function(){
 
 
 		<!-- This button will submit a query to the Database in order for the table to be updated -->
-		<input type="submit" value="Submit Search" onclick=" "/> 
+		<form action="view_issues.php" method="POST">
+		<input type="submit" value="Submit" name='submit'/> 
+
+		<?php 
+			if(isset($_POST['submit'])) {
+				select();
+			}
+
+			function select(){
+			$DBConnect= @mysqli_connect("localhost", "team_c", "3gCLD+9D+Fx8")
+				Or die("<p>Unable to connect to the database server.</p>" . "<p>Error code " . mysqli_connect_errno() . ": " . mysqli_connect_error()) . "</p>";
+			$DBName= "team_c";
+			@mysqli_select_db($DBConnect, $DBName)
+				Or die("<p>Unable to select the database.</p>" . "<p>Error code " . mysqli_errno($DBConnect) . ": " . mysqli_error($DBConnect)) . "</p>";
+				
+			$TableName= "REPORT";
+		        $SQLstring= "SELECT Building, Floor, Room_Number, General_type, Specific_type, Descr, Status FROM $TableName";
+
+			$BUILDING= $_POST['Building'];
+			$FLOOR= $_POST['Floor'];
+			$ROOMNUM= $_POST['Room_Number'];
+			$GENTYPE= $_POST['General_type'];
+			$SPECIFICTYPE= $_POST['Specific_type'];
+<!--
+		        if($BUILDING != 'Any' || $FLOOR != 'Any' || !empty($ROOMNUM) || $GENTYPE == 'Any' || !empty($SPECIFICTYPE))
+		                $SQLstring .= "WHERE ";
+		        if($BUILDING != 'Any')
+		                $SQLstring .="Building = '$BUILDING'";
+		        if($BUILDING != 'Any' && $FLOOR != 'Any')
+		                $SQLstring .= " AND ";
+		        if($FLOOR != 'Any')
+		                $SQLstring .="Floor = '$FLOOR'";
+		        if(($BUILDING != 'Any' || $FLOOR != 'Any') && !empty($ROOMNUM))
+		                $SQLstring .=" AND ";
+		        if(!empty($ROOMNUM))
+		                $SQLstring .="Room_Number = '$ROOMNUM'";
+		        if(($BUILDING != 'Any' || $FLOOR != 'Any' || !empty($ROOMNUM)) && $GENTYPE != 'Any')
+		                $SQLstring .=" AND ";
+		        if($GENTYPE != 'Any')
+		                $SQLstring .="General_type = '$GENTYPE'";
+		        if(($BUILDING != 'Any' || $FLOOR != 'Any' || !empty($ROOMNUM) || $GENTYPE != 'Any') && !empty($SPECIFICTYPE))
+		                $SQLstring .=" AND ";
+		        if(!empty($SPECIFICTYPE))
+		                $SQLstring .="Specific_type = '$SPECIFICTYPE'";
+-->			
+			$QueryResult= @mysqli_query($DBConnect, $SQLstring)
+				Or die("<p>Unable to execute the query.</p>" . "<p>Error code " . mysqli_errno($DBConnect) . ": " . mysqli_error($DBConnect)) . "</p>";
+ 			if (mysqli_num_rows($QueryResult) == 0) {
+				exit("<p>No tickets or issues exist that meet your search criteria.  Please select different search criteria and try again.</p>");
+			}
+
+			echo "<table width='100%' border='1'>";
+			echo "<tr> <th>Team ID</th> <th>Team Name</th> <th>Start Year</th> <th>Owner</th> <th>General Manager</th> <th>Coach</th> <th>Starting QB</th> <th>Office Address</th> <th>City</th> <th>State</th> <th>Zip Code</th> <th>Phone</th> <th>Overall Record</th> <th>Conference Record</th> </tr>";
+
+			do {
+		                $Row = mysqli_fetch_row($QueryResult);
+				echo "<tr> <td>{$Row[0]}</td> <td>{$Row[1]}</td> <td>{$Row[2]}</td> <td>{$Row[3]}</td> <td>{$Row[4]}</td> <td>{$Row[5]}</td> <td>{$Row[6]}</td> </tr>";
+		        } while ($Row);
+		        echo "</table>";
+
+			//mysqli_close($DBConnect);
+			
+			}
+		?>
 		
-	<hr/>
-		<table> <!-- This Table will get information from Database on issues that have been reported. Border: thin solid black-->
+	<!-- <hr/>
+		<table>  This Table will get information from Database on issues that have been reported. Border: thin solid black
 			<tr>
 				<th> Building </th>
 				<th> Floor </th>
@@ -164,7 +224,7 @@ $(".fa-bandcamp").on("click", function(){
 				<th> Status </th>
 				<th> Select </th>
 			</tr>
-			<tr><!-- Placeholder Example of what should happen once the Table gets information from Database-->
+			<tr> Placeholder Example of what should happen once the Table gets information from Database
 				<th> Example </th>
 				<th> Example </th>
 				<th> Example </th>
@@ -173,7 +233,7 @@ $(".fa-bandcamp").on("click", function(){
 				<th> <input type="submit" value="Select"/> </th>
 			</tr>
 			</table>
-		</div>
+		</div> -->
 
 		<footer>
 			<p>Team C, Copyright &copy; 2019</p>
