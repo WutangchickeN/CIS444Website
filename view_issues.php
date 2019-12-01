@@ -8,7 +8,28 @@
     <style type ="text/css"> td, th, table {border: thin solid black;} img {float: right;}</style>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="issue_pop_up.js"></script>
+	<script src="issue_pop_up.js"></script>
+	
+
+<?php
+    //connect.php
+    $con = mysqli_connect("localhost", "team_c", "3gCLD+9D+Fx8");
+    // Connection Failed
+    if(!con){
+        print "Connecting to MySQL has failed.";
+        exit;
+    }
+    // Account Selection on Server
+    $userAccount = mysqli_select_db($con, "team_c");
+
+
+    if(!$userAccount){
+        print "Error - Unable to select the team_c database.";
+        exit;
+    }
+?>
+
+
 </head>
 <body>
 
@@ -158,11 +179,12 @@ $(".fa-bandcamp").on("click", function(){
 			}
 
 			function select(){
-			$DBConnect= @mysqli_connect("localhost", "team_c", "3gCLD+9D+Fx8")
-				Or die("<p>Unable to connect to the database server.</p>" . "<p>Error code " . mysqli_connect_errno() . ": " . mysqli_connect_error()) . "</p>";
-			$DBName= "team_c";
-			@mysqli_select_db($DBConnect, $DBName)
-				Or die("<p>Unable to select the database.</p>" . "<p>Error code " . mysqli_errno($DBConnect) . ": " . mysqli_error($DBConnect)) . "</p>";
+//			$DBConnect= @mysqli_connect("localhost", "team_c", "3gCLD+9D+Fx8")
+//				Or die("<p>Unable to connect to the database server.</p>" . "<p>Error code " . mysqli_connect_errno() . ": " . mysqli_connect_error()) . "</p>";
+//			$DBName= "team_c";
+//			@mysqli_select_db($DBConnect, $DBName)
+//				Or die("<p>Unable to select the database.</p>" . "<p>Error code " . mysqli_errno($DBConnect) . ": " . mysqli_error($DBConnect)) . "</p>";
+                include 'connect.php';
 				
 			$TableName= "REPORT";
 		        $SQLstring= "SELECT Building, Floor, Room_Number, General_type, Specific_type, Descr, Status FROM $TableName";
@@ -172,7 +194,7 @@ $(".fa-bandcamp").on("click", function(){
 			$ROOMNUM= $_POST['Room_Number'];
 			$GENTYPE= $_POST['General_type'];
 			$SPECIFICTYPE= $_POST['Specific_type'];
-<!--
+
 		        if($BUILDING != 'Any' || $FLOOR != 'Any' || !empty($ROOMNUM) || $GENTYPE == 'Any' || !empty($SPECIFICTYPE))
 		                $SQLstring .= "WHERE ";
 		        if($BUILDING != 'Any')
@@ -193,7 +215,7 @@ $(".fa-bandcamp").on("click", function(){
 		                $SQLstring .=" AND ";
 		        if(!empty($SPECIFICTYPE))
 		                $SQLstring .="Specific_type = '$SPECIFICTYPE'";
--->			
+			
 			$QueryResult= @mysqli_query($DBConnect, $SQLstring)
 				Or die("<p>Unable to execute the query.</p>" . "<p>Error code " . mysqli_errno($DBConnect) . ": " . mysqli_error($DBConnect)) . "</p>";
  			if (mysqli_num_rows($QueryResult) == 0) {
@@ -201,7 +223,7 @@ $(".fa-bandcamp").on("click", function(){
 			}
 
 			echo "<table width='100%' border='1'>";
-			echo "<tr> <th>Team ID</th> <th>Team Name</th> <th>Start Year</th> <th>Owner</th> <th>General Manager</th> <th>Coach</th> <th>Starting QB</th> <th>Office Address</th> <th>City</th> <th>State</th> <th>Zip Code</th> <th>Phone</th> <th>Overall Record</th> <th>Conference Record</th> </tr>";
+			echo "<tr> <th>Building</th> <th>Floor</th> <th>Room Number</th> <th>General Issue</th> <th>Specific Issue</th> <th>Description</th> </tr>";
 
 			do {
 		                $Row = mysqli_fetch_row($QueryResult);
