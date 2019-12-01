@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE  html >
 <html lang="en" >
   <head>
@@ -19,7 +21,7 @@
         <a class="hamburger-nav"></a>
         <ul class="menu">
         <li><a href="http://cis444.cs.csusm.edu/team_c/submit_ticket.html" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
-        <li> <a href="http://cis444.cs.csusm.edu/team_c/view_issues.php" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+        <li> <a href="http://cis444.cs.csusm.edu/team_c/view_issues.html" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
         <li><a href="http://cis444.cs.csusm.edu/team_c/reporting.html" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
         <li><a href="http://cis444.cs.csusm.edu/team_c/about.html" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
         </ul>
@@ -63,30 +65,28 @@
     });
 
     </script>  
-
-    <div class="container">
+      <div class="container">
       <h2 class="shadow">Report an Issue</h2>
-      <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
-        <div class="dropdown">
-          <select>
-            <option selected>Select Option</option>
-            <option>Broken links</option>
-            <option>Information Display Issue</option>
-            <option>Website Formating Issue</option>
-            <option>Map Functionality Issue</option>
-            <option>Specific Page Issue</option>
-            
+      <form id = "contact-form" method = "post" action =  "submit_report.php">
+      <div class="dropdown">
+            <select required name = "select">
+            <option value = "">Select Option</option>
+            <option value = "[Broken Links]">Broken links</option>
+            <option value = "[Information Display Issue]">Information Display Issue</option>
+            <option value = "[Website Formating Issue]">Website Formating Issue</option>
+            <option value = "[Map Functionality Issue]">Map Functionality Issue</option>
+            <option value = "[Specific Page Issue]">Specific Page Issue</option>
           </select>
         </div>
-
         <div style="position: relative; left: 3px; width: 100%;">
-          <form>
-            <textarea rows="15" cols="80">Description of Issue ...
-            </textarea><br>
+                <input name = "subject" size = "80" placeholder = "Subject .. " required ><br>
+            <textarea name = "message"rows="15" cols="80" placeholder = "Descripe the issue" required></textarea><br>
             <div style=" width: 60%; position: relative; left: 100px;" >
             <button style=" padding: 8px; width: 80px; font-size: 10px;background-color:#f0f0f0  " type="submit" value="Submit"><strong> Submit</strong></button> <button  style="padding: 8px; width: 80px; font-size: 10px; margin-bottom: 5px; background-color:#f0f0f0  " type="reset" value="Reset"><strong>Reset</strong></button>
             </div>
           </form>
+            
+            
         </div>
       </div>
 
