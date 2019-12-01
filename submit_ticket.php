@@ -152,49 +152,38 @@ if (isset($_POST['submitted'])) {
 	else
 	echo "<p>Connection Successful</p>";
 	
-	$Building = $_POST['Building'];
-	$Floor = $_POST['Floor'];
-	$RoomNumber = $_POST['RoomNumber'];
 	$GeneralType = $_POST['slct1'];
 	$SpecificType = $_POST['slct2'];
 	$Description = $_POST['extraInfo'];
+	$Building = $_POST['Building'];
+	$RoomNumber = $_POST['RoomNumber'];
+	$Floor = $_POST['Floor']; 
 
-	$QueryResult = "INSERT INTO REPORT (General_type, Specific_type, Descr, Building, Room_Number, Floor) VALUES ('$GeneralType', '$SpecificType', '$Building', '$RoomNumber', '$Floor', 'Description')";
+	$SQLstring = "INSERT INTO REPORT (General_type, Specific_type, Descr, Report_No, Status, Building, Room_Number, Floor, ID_Number, Report_Date, Complete_Date, Completed_By) VALUES ('$GeneralType', '$SpecificType', '$Description', '00000001', 'Incomplete', '$Building', '$RoomNumber', '$Floor', '123456789', '2020-01-01', '2020-02-02 ', 'NONE')";
 
-	if(!mysqli_query($DBConnect, $QueryResult)){
-		die('Error Inserting New Reporting Ticket');
+	if(!mysqli_query($DBConnect, $SQLstring)){
+		echo "<p>Error Inserting New Reporting Ticket<?p>";
 	}
 	else
 		echo "<p>Reporting Ticket added to the Database</p>";
-
-	mysqli_close($DBConnect);
 	}
+
+	$QueryResult = mysqli_query($DBConnect, "SELECT* FROM REPORT");
+	echo "<table width='100%' border='1'>";
+	echo "<tr><th>General type</th><th>Specific type</th><th>Description</th><th>Report Number</th><th>Status</th><th>Building</th><th>Room Number</th><th>Floor</th><th>ID Number</th><th>Report Date</th><th>Complete Date</th><th>Completed By</th>";
+
+	while ($row = mysqli_fetch_assoc($QueryResult)) {
+		echo "<tr>";
+		foreach ($row as $column) 
+			echo "<td>$column</td>";
+		echo"</tr>";	
+	}
+
+	echo "</table>";
+	mysqli_close($DBConnect);
  ?>
- 
-<?php
-		
-?>
 
 			<hr/>
-
-			<table> <!-- This Table will get information from Database on issues that have been reported. Border: thin solid black-->
-				<tr> Outstanding Reports </tr>
-				<tr>
-					<th> Building </th>
-					<th> Floor </th>
-					<th> Room Number </th>
-					<th> Description</th>
-					<th> Status </th>
-				</tr>
-				<tr><!-- Placeholder Example of what should happen once the Table gets information from Database-->
-					<th> Example </th>
-					<th> Example </th>
-					<th> Example </th>
-					<th> Example </th>
-					<th> Incomplete </th>
-				</tr>
-			</table>
-		</div>
 
 		<footer>
 			<p>Team C, Copyright &copy; 2019</p>
