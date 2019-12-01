@@ -68,16 +68,14 @@
 
 
         <div style="position: relative; left: 3px; width: 100%;">
-            <form id = "contact-form" method = "post" action =  "submit_report.php">
+            <form id = "contact-form" method = "post" action = "submit_report.php">
                 <br>
                 <textarea name = "message"rows="15" cols="80"> <?php
                     $to_email = "banaw001@cougars.csusm.edu";
-                    $subject = $_POST['subject'];
-                    $body = $_POST['message'];
-
-                    $header = "From: sender\'s email";
-                    
-                    if(mail($to_email,$subject,$body,$headers))
+                    $subject = "[REPORT] " . $_POST['subject'];
+                    $issue = $_POST['select'];
+                    $body = "Issue Type: " . $issue . "\n\n" . $_POST['message'];
+                    if(mail($to_email,$subject,$body))
                     {
                         echo
                             "We have recieved your report.. \n Thank you for reporting.. \n\n\n";
