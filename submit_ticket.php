@@ -28,8 +28,8 @@
 			
       
 			<ul class="menu2">
-			<li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
-			<li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
+			<li><a href="http://cis444.cs.csusm.edu/team_c/login.php" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
+			<li>  <a href="http://cis444.cs.csusm.edu/team_c/registration.php" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
 			</ul>
      	 	</div>
   		</div>
