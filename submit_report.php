@@ -12,29 +12,26 @@
   </head>
 
   <body>
-    <div class="nav">
-      <div class="logo" style="padding-top:13px;padding-bottom:10px">
-        <i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
-        <h4 style="margin-left:702px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
-        </div>
-      <div class="main-nav">
-        <a class="hamburger-nav"></a>
-        <ul class="menu">
-        <li><a href="http://cis444.cs.csusm.edu/team_c/submit_ticket.html" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
-        <li> <a href="http://cis444.cs.csusm.edu/team_c/view_issues.html" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
-        <li><a href="http://cis444.cs.csusm.edu/team_c/reporting.html" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
-        <li><a href="http://cis444.cs.csusm.edu/team_c/about.html" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
-        </ul>
-        
-        
-        <ul class="menu2">
-        <li><a href="#home" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
-        <li>  <a href="#portfolio" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
-        </ul>
-        
-        
-        </div>
-    </div>
+  <div class="nav">
+    			<div class="logo" style="padding-top:13px;padding-bottom:10px">
+      				<i class="fa fa-bandcamp" aria-hidden="true" style="display:inline"></i>
+      				<h4 style="margin-left:802px;margin-top:0px;margin-bottom:0px;display:inline;color:white">Campus Reporter</h4>
+      			</div>
+   			<div class="main-nav">
+      				<a class="hamburger-nav"></a>
+     				<ul class="menu">
+      					<li><a href="http://cis444.cs.csusm.edu/team_c/submit_ticket.php" style="color: white;"><i class="fa fa-home"></i> Submit a Ticket Page</a></li>
+        				<li> <a href="http://cis444.cs.csusm.edu/team_c/view_issues.php" style="color: white;"><i class="fa fa-file-image-o"></i> View Issues Page</a></li>
+        				<li><a href="http://cis444.cs.csusm.edu/team_c/reporting.html" style="color: white;"><i class="fa fa-user"></i> Report a problem Page</a></li>
+        				<li><a href="http://cis444.cs.csusm.edu/team_c/about.html" style="color: white;"><i class="fa fa-envelope"></i> About page</a></li>
+        			</ul>
+      
+      				<ul class="menu2">
+      					<li><a href="http://cis444.cs.csusm.edu/team_c/login.php" style="color: white;"><i class="fa fa-home"></i> Login</a></li>
+      					<li><a href="http://cis444.cs.csusm.edu/team_c/registration.php" style="color: white;"><i class="fa fa-file-image-o"></i> Register</a></li>
+     		 		</ul>
+      			</div>
+  		</div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
