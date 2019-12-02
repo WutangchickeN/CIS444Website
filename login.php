@@ -15,7 +15,7 @@ if(isset($_POST['login'])){
 		}
 		else
 		{
-			header("Location:homepage.html");
+			header("Location:index.html");
 		}
 
 }
