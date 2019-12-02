@@ -68,7 +68,7 @@
             <form id = "contact-form" method = "post" action = "submit_report.php">
                 <br>
                 <textarea name = "message"rows="15" cols="80"> <?php
-                    $to_email = "banaw001@cougars.csusm.edu";
+                    $to_email = "reports.csusm@gmail.com";
                     $subject = "[REPORT] " . $_POST['subject'];
                     $issue = $_POST['select'];
                     $body = "Issue Type: " . $issue . "\n\n" . $_POST['message'];
